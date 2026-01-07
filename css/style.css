@@ -1,0 +1,732 @@
+/* ============================= */
+/* RESET & BASE */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f1f1f;
+  background:
+    radial-gradient(circle at top left, #ffe6f0, transparent 40%),
+    radial-gradient(circle at bottom right, #f5f5f5, transparent 45%);
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.affiliate-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #777;
+}
+
+.affiliate-badge img {
+  height: 18px;
+}
+
+/* ============================= */
+/* NAV (MOBILE) */
+/* ============================= */
+.burger {
+  font-size: 26px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  border-bottom: 1px solid #eee;
+}
+
+.nav a {
+  display: block;
+  padding: 14px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+.hero {
+  padding: 80px 20px 60px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-brand {
+  display: inline-block;
+  letter-spacing: 4px;
+  font-size: 20px;
+  color: #0f0f0f;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shop-now-btn {
+  background: #111;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.secondary-btn {
+  border: 1px solid #111;
+  color: #111;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* TRUST STRIP */
+/* ============================= */
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* COLLECTIONS */
+/* ============================= */
+.collections {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.collections h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.collection-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.collection-image {
+  background: linear-gradient(135deg, #f7f7f7, #fff);
+  padding: 20px;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.06);
+}
+
+.collection-card p {
+  padding: 14px;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* FEATURED */
+/* ============================= */
+.featured {
+  display: grid;
+  gap: 30px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.featured-text h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.featured-text p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* ============================= */
+/* BRAND STORY */
+/* ============================= */
+.brand-story {
+  text-align: center;
+  padding: 80px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.brand-story h2 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.brand-story p {
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.affiliate-footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.affiliate-logo {
+  height: 18px;
+}
+
+/* ============================= */
+/* DESKTOP ENHANCEMENTS */
+/* ============================= */
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .nav li {
+    border: none;
+  }
+
+  .featured {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+/* ============================= */
+/* CONTACT PAGE – LUXURY UPGRADE */
+/* ============================= */
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px 100px;
+}
+
+/* ----------------------------- */
+/* HERO */
+/* ----------------------------- */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-hero p {
+  color: #666;
+  font-size: 16px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ----------------------------- */
+/* EMAIL INFO CARD */
+/* ----------------------------- */
+.contact-info {
+  max-width: 520px;
+  margin: 0 auto 50px;
+  padding: 28px;
+  text-align: center;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.contact-info h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-info::after {
+  content: "Private & discreet communication guaranteed";
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* ----------------------------- */
+/* FORM CARD */
+/* ----------------------------- */
+.contact-form-section {
+  max-width: 520px;
+  margin: auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+/* ----------------------------- */
+/* FORM */
+/* ----------------------------- */
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  background: #fafafa;
+  transition: all 0.25s ease;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #111;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+}
+
+/* ----------------------------- */
+/* SUBMIT BUTTON */
+/* ----------------------------- */
+.contact-form button {
+  margin-top: 10px;
+  align-self: center;
+  width: 100%;
+  max-width: 260px;
+}
+
+/* ----------------------------- */
+/* MOBILE SPACING POLISH */
+/* ----------------------------- */
+@media (max-width: 480px) {
+  .contact-form-section {
+    padding: 32px 22px;
+  }
+
+  .contact-hero h1 {
+    font-size: 30px;
+  }
+}
+
+/* ----------------------------- */
+/* DESKTOP ENHANCEMENT */
+/* ----------------------------- */
+@media (min-width: 768px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-hero {
+    grid-column: 1 / -1;
+  }
+
+  .contact-info,
+  .contact-form-section {
+    margin: 0;
+  }
+}
+/* ============================= */
+/* SHOP INTRO */
+/* ============================= */
+.shop-intro {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.shop-intro h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.shop-intro p {
+  color: #555;
+  font-size: 16px;
+  max-width: 100%;
+  line-height: 1.7;
+}
+/* ============================= */
+/* SHOP SECTIONS */
+/* ============================= */
+.shop-section {
+  margin-bottom: 70px;
+}
+
+.shop-section h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  padding-left: 6px;
+}
+
+/* Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* MOBILE */
+  gap: 14px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop – 6 per row */
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+  }
+}
+/* ============================= */
+/* PRODUCT CARDS */
+/* ============================= */
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+.product-inner {
+  padding: 14px;
+  text-align: center;
+}
+/* ============================= */
+/* PRODUCT IMAGES */
+/* ============================= */
+.product-image {
+  background: linear-gradient(135deg, #f7f7f7, #ffffff);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 120px;          /* SMALLER IMAGE */
+  object-fit: contain;   /* NO CROPPING */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Desktop slightly taller */
+@media (min-width: 1024px) {
+  .product-image img {
+    height: 140px;
+  }
+}
+/* ============================= */
+/* PRODUCT TEXT */
+/* ============================= */
+.product-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+  min-height: 38px; /* keeps grid tidy */
+}
+.more-toys {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.more-toys h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.toy-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  max-width: 800px;
+  margin: auto;
+  color: #555;
+  font-size: 15px;
+}
+.packaging-section {
+  padding: 80px 20px;
+}
+
+.packaging-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 40px;
+}
+
+.packaging-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+@media (min-width: 768px) {
+  .packaging-content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+/* ============================= */
+/* ABOUT PAGE CONTAINER */
+/* ============================= */
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px 100px;
+  line-height: 1.7;
+  color: #1f1f1f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+.about-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: #555;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* ============================= */
+/* ABOUT CONTENT SECTION */
+/* ============================= */
+.about-content {
+  display: grid;
+  gap: 24px;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.about-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.about-content p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Highlight brand name */
+.about-content .brand-name.standout {
+  font-weight: 700;
+  color: #eedf86; /* bright luxury pink accent */
+}
+
+/* ============================= */
+/* MOBILE ADJUSTMENTS */
+/* ============================= */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 40px 16px 60px;
+  }
+
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-content h2 {
+    font-size: 20px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+/* =====================*
